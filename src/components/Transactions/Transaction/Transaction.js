@@ -130,7 +130,7 @@ const Transaction = () => {
                         <div className={classes.txnDataContainer}>
                             <div className={classes.txnDetailKeyContainer}>
                                 <span className={classes.txnDetailKeyText}>
-                                    Gas Price
+                                    Drala Price
                                 </span>
                             </div>
                             <div className={classes.txnDetailValueContainer}>
