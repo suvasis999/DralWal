@@ -1,0 +1,111 @@
+.blockDataWrapper {
+    margin: auto;
+    min-height: calc(100vh - 10rem);
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.blockMainParentWrapper {
+    padding-top: 4rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.blockDataContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: max-content;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.border {
+    border-top: 1px solid black;
+}
+
+.blockDataMainContainer {
+    display: inline-block;
+    color: black;
+    padding: 1.5rem;
+    min-height: 35rem;
+    min-width: 60%;
+}
+
+.blockNoContainer {
+    padding: 1rem;
+}
+
+.blockNoText {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.blockNoValue {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.blockDetailsContainer {
+    padding: 1rem 0;
+}
+
+.blockDetailKeyContainer {
+    padding-left: 1rem;
+    width: 30%;
+}
+
+.blockDetailKeyText {
+    font-size: 1rem;
+}
+
+.blockDetailValueContainer {
+    padding-right: 1rem;
+    width: calc(70%);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.blockDetailValueText {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.loadingText {
+    display: flex;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .blockDataContainer {
+        flex-direction: column;
+    }
+
+    .blockDetailKeyContainer {
+        width: 100%;
+        padding: 0;
+    }
+
+    .blockDetailValueContainer {
+        width: 100%;
+    }
+
+    .blockDetailsContainer {
+        text-align: initial;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .blockDataMainContainer {
+        display: block;
+    }
+}

@@ -1,0 +1,110 @@
+.blockTxnsWrapper {
+    margin: auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.blockChildTxnsWrapper {
+    padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.addMainDetailsContainer {
+    width: 80%;
+    border-radius: 25px;
+    display: inline-block;
+    margin: auto;
+    color: black;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.addressNoContainer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.addNoText {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.addNoValue {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.overviewAddContainer {
+    padding: 0.5rem 2rem;
+}
+
+.overviewAddText {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.overviewDetailsContainer {
+    padding: 0 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.overviewDetailKeyText {
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-weight: 500;
+}
+
+.border {
+    border-top: 1px solid black;
+}
+
+.tableContainer {
+    width: 100%;
+    border: 1px solid black;
+    padding: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tableHeadingContainer {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+}
+
+.majorDataText {
+    display: inline-block;
+    min-width: 12rem;
+    width: calc(24%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.minorDataText {
+    display: inline-block;
+    min-width: 12rem;
+    width: calc(7%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+
+
+.textDetailsContainer {
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+    display: block;
+    color: black;
+}
+
+.textDetailsContainer:hover{
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}

@@ -1,0 +1,188 @@
+.addressDataWrapper {
+    margin: auto;
+    text-align: center;
+    min-height: calc(100vh - 10rem);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.addParentWrapper {
+    padding-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: calc(100vh - 10rem);
+}
+
+.addMainDetailsContainer {
+    width: 80%;
+    display: inline-block;
+    margin: auto;
+    color: black;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.addressNoContainer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.addNoText {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.addNoValue {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.overviewAddContainer {
+    padding: 0.5rem 2rem;
+}
+
+.overviewAddText {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.overviewDetailsContainer {
+    padding: 0 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.overviewDetailKeyText {
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-weight: 500;
+}
+
+.border {
+    border-top: 1px solid black;
+}
+
+
+
+
+.loadingText {
+    display: flex;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.blockDataWrapper {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.allBlocksDetailsContainer {
+    color: black;
+    padding: 1.5rem;
+    background-color: rgba( 255, 255, 255, 0.8);
+}
+
+.blocksTextContainer {
+    padding: 1rem 2rem;
+}
+
+.blockTextValue {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tableContainer {
+    border: 1px solid black;
+    padding: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tableHeadingContainer {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+}
+
+.majorDataText {
+    display: inline-block;
+    min-width: 12rem;
+    width: calc(23%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.minorDataText {
+    display: inline-block;
+    min-width: 12rem;
+    width: calc(7%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+
+
+.textDetailsContainer {
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+    display: block;
+    color: black;
+}
+
+.textDetailsContainer:hover {
+    color: rgba( 0, 0, 0, 0.5);
+    width: 100%;
+    font-weight: 500;
+}
+
+
+.blocksPaginationContainer {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.blocksPrevContainer {
+    padding: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 0.5px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.blocksPrevContainerValue {
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 0.5px solid black;
+    color: black;
+    text-decoration: underline;
+}
+
+/* @media screen and (max-width: 1550px) {
+    .majorDataText {
+        width: 14rem;
+    }
+
+    .minorDataText {
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .majorDataText {
+        width: 12rem;
+    }
+
+    .minorDataText {
+        width: 10rem;
+    }
+} */

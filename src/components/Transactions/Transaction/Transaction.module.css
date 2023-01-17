@@ -1,0 +1,106 @@
+.transactionDataWrapper {
+    margin: auto;
+    min-height: calc(100vh - 10rem);
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.txnDataMainPWrapper {
+    padding-top: 4rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.loadingText {
+    display: flex;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.transactionMainDataContainer {
+    display: inline-block;
+    color: black;
+    padding: 1.5rem;
+    min-height: 35rem;
+    min-width: 60%;
+}
+
+.transactionDetailContainer {
+    padding: 1rem;
+}
+
+.transactionDetailText {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.txnDetailsContainer {
+    padding: 1rem 0;
+}
+
+.border {
+    border-top: 1px solid black;
+}
+
+.txnDataContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: max-content;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.txnDetailKeyContainer {
+    padding-left: 1rem;
+    width: 30%;
+}
+
+.txnDetailKeyText {
+    font-size: 1rem;
+}
+
+.txnDetailValueContainer {
+    padding-right: 1rem;
+    width: calc(70%);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.txnDetailValueText {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+    .txnDataContainer {
+        flex-direction: column;
+    }
+
+    .txnDetailKeyContainer {
+        width: 100%;
+        padding: 0;
+    }
+
+    .txnDetailValueContainer {
+        width: 100%;
+    }
+
+    .txnDetailsContainer {
+        text-align: initial;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .transactionMainDataContainer {
+        display: block;
+    }
+}

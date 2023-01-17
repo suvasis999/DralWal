@@ -1,0 +1,48 @@
+.price-stats {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0px 30px;
+    padding-block: 2em;
+    border-radius: 20px;
+    border: 2px solid grey;
+    border-top-left-radius: 8px;
+    flex-wrap: wrap;
+}
+.price-stats {
+    margin: 20px 20px;
+    margin-bottom: 0px;
+    background: white;
+}
+.icons{
+    height: 55px;
+    width:55px;
+    border-radius: 30px;
+}
+.iconsDrala{
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+}
+.left-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 110px;
+    row-gap: 30px;
+}
+
+.submain-1{
+    display: flex;
+    gap: 10px;
+}
+.para{
+    text-align: left;
+    font-size: 18px;
+}
+.spn{
+    color: grey;
+}
+.spn-p{
+    font-size: 20px;
+    font-weight: 500;
+}

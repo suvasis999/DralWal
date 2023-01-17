@@ -1,0 +1,48 @@
+.contentContainer {
+    background-color: rgba( 255, 255, 255, 0.8);
+    padding: 0px 20px;
+}
+
+.contentHeadingContainer {
+    padding-top: 70px;
+}
+
+.contentHeadingText {
+    color: black;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.inputContainer {
+    padding-top: 40px;
+    height: 40px !important;
+    padding-bottom: 3rem;
+}
+
+.inputFieldContainer {
+    display: inline-block;
+    width: 60% !important;
+
+}
+
+.inputField {
+    height: 40px;
+    width: 100% !important;
+    border: 1px solid #10A8B6;
+    outline: none !important;
+    padding: 4px !important;
+    border-radius: 5px;
+}
+
+.inputField:active, .inputField:focus {
+    outline: none;
+}
+
+.inputSearchText {
+    height: 100%;
+    padding-left: 12px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
