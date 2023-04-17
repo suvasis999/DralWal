@@ -16,7 +16,7 @@
 .inputContainer {
     padding-top: 40px;
     height: 40px !important;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .inputFieldContainer {
@@ -24,7 +24,10 @@
     width: 60% !important;
 
 }
-
+.errText{
+    color:red;
+    padding:10px;font-size:12px;font-weight: bold;
+}
 .inputField {
     height: 40px;
     width: 100% !important;
@@ -45,4 +48,17 @@
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
+    background-color: orange;
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #d97112;
+}
+.trans_card{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 110px;
+    row-gap: 30px;
+    justify-content: center;
+    margin-top: 45px;
 }

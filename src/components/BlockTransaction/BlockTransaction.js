@@ -6,9 +6,9 @@ import Transaction from "./Transaction/Transaction";
 const BlockTransaction = () => {
     return(
         <div className={classes.blockTransactionContainer}>
-            <div className={classes.blockTxnMgn}>
+           {/*} <div className={classes.blockTxnMgn}>
                 <Block />
-            </div>
+    </div>*/}
             <div className={classes.blockTxnMgn}>
                 <Transaction />
             </div>

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { timeConvert } from "../../../utils/timeconvert";
 import classes from './Block.module.css';
 import { ethers } from 'ethers';
-
+import moment from 'moment';
 const Block = () => {
 
     const { id } = useParams();
@@ -11,6 +11,7 @@ const Block = () => {
     const navigate = useNavigate();
     const [blockData, setblockData] = useState({});
     const [loading, setLoading] = useState(true);
+    const [err, setErr] = useState(false);
     const options = {
         method: 'POST',
         headers: {
@@ -30,6 +31,10 @@ const Block = () => {
             if(data.status) {
                 setblockData(data.hash);
                 setLoading(false);
+                setErr(false);
+            }
+            else{
+                setErr(true);
             }
         })
         .catch((err) => {
@@ -45,9 +50,18 @@ const Block = () => {
         <div className={classes.blockDataWrapper}>
             {
                 loading ?
-                <div className={classes.loadingText}>
-                    Loading...
+                <div className={classes.blockMainParentWrapper}>
+                    <div className={classes.blockDataMainContainer}>
+                        <div className={classes.blockNoContainer}>
+                        <div className={classes.loadingText}>
+                            
+                            {err==true?
+                            'Data not Found':'Loading...'}
+                        </div>
+                        </div>
+                    </div>
                 </div>
+               
                 :
                 <div className={classes.blockMainParentWrapper}>
                     <div className={classes.blockDataMainContainer}>
@@ -64,7 +78,7 @@ const Block = () => {
                             <div className={classes.blockDataContainer}>
                                 <div className={classes.blockDetailKeyContainer}>
                                     <span className={classes.blockDetailKeyText}>
-                                        Block Height
+                                        Block Number
                                     </span>
                                 </div>
                                 <div className={classes.blockDetailValueContainer}>
@@ -77,12 +91,13 @@ const Block = () => {
                             <div className={classes.blockDataContainer}>
                                 <div className={classes.blockDetailKeyContainer}>
                                     <span className={classes.blockDetailKeyText}>
-                                        Timestamp
+                                        Date Time
                                     </span>
                                 </div>
                                 <div className={classes.blockDetailValueContainer}>
                                     <span className={classes.blockDetailValueText}>
-                                        {timeConvert(blockData.timestamp)}
+                                    {moment(blockData.timestamp * 1000).utc().format("YYYY-MM-DD HH:mm:ss")} UTC
+                                        
                                     </span>
                                 </div>
                             </div>                
@@ -108,7 +123,7 @@ const Block = () => {
                                 </div>
                             </div>                
                             <div className={classes.border} />
-                            <div className={classes.blockDataContainer}>
+                           {/* <div className={classes.blockDataContainer}>
                                 <div className={classes.blockDetailKeyContainer}>
                                     <span className={classes.blockDetailKeyText}>
                                     Fee recipient
@@ -119,8 +134,8 @@ const Block = () => {
                                     {blockData.miner}
                                     </span>
                                 </div>
-                            </div>                
-                            <div className={classes.border} />
+                            </div>               
+                            <div className={classes.border} />*/} 
                             <div className={classes.blockDataContainer}>
                                 <div className={classes.blockDetailKeyContainer}>
                                     <span className={classes.blockDetailKeyText}>
@@ -134,7 +149,7 @@ const Block = () => {
                                 </div>
                             </div>                            
                             <div className={classes.border} />
-                            <div className={classes.blockDataContainer}>
+                           {/* <div className={classes.blockDataContainer}>
                                 <div className={classes.blockDetailKeyContainer}>
                                     <span className={classes.blockDetailKeyText}>
                                         Drala Used
@@ -157,7 +172,7 @@ const Block = () => {
                                     <span className={classes.blockDetailValueText}>
                                     {ethers.utils.formatEther(Number(blockData.gasLimit.hex))}                                    </span>
                                 </div>
-                            </div>
+                        </div>*/}
                             
                         </div>
                     </div>

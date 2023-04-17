@@ -90,7 +90,7 @@ const Address = () => {
                                     To
                                 </span>
                                 <span className={classes.minorDataText}>
-                                    Value
+                                    Drala
                                 </span>
                                 <span className={classes.minorDataText}>
                                     Fee

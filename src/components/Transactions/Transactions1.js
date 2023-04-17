@@ -3,6 +3,8 @@ import classes from './Transactions1.module.css';
 import { timeConvert } from "../../utils/timeconvert";
 import { useNavigate } from "react-router-dom";
 import { ethers } from 'ethers';
+import moment from 'moment';
+
 
 const Transactions = () => {
 
@@ -49,6 +51,7 @@ const Transactions = () => {
         })
         .then((data) => {
             const val = data.message;
+            console.log(val);
             setTranData(val);
             setLoading(false);
         })
@@ -78,6 +81,9 @@ const Transactions = () => {
                         </div>
                         <div className={classes.tableContainer}>
                             <div className={classes.tableHeadingContainer}>
+                            <span className={classes.majorDataText}>
+                                    Date Time
+                                </span>
                                 <span className={classes.majorDataText}>
                                     Txn Hash
                                 </span>
@@ -94,16 +100,19 @@ const Transactions = () => {
                                     To
                                 </span>
                                 <span className={classes.minorDataText}>
-                                    Value
+                                Drala
                                 </span>
-                                <span className={classes.minorDataText}>
+                               {/* <span className={classes.minorDataText}>
                                     Fee
-                                </span>
+                            </span>*/}
                             </div>
                             {
                                 tranData.map((data, ind) => {
                                     return(
                                             <div key={ind} className={classes.textDetailsContainer}>
+                                                <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
+                                                {moment(data.timestamp* 1000).utc().format("YYYY-MM-DD HH:mm:ss")} UTC
+                                            </span>
                                             <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
                                                 {data.hash}
                                             </span>
@@ -122,9 +131,9 @@ const Transactions = () => {
                                             <span className={classes.minorDataText}>
                                             {ethers.utils.formatEther(data.value)}
                                             </span>
-                                            <span className={classes.minorDataText}>
+                                           {/* <span className={classes.minorDataText}>
                                             {ethers.utils.formatEther(data.gasUsed)}
-                                            </span>
+                                        </span>*/}
                                         </div>
                                     )
                                 })

@@ -25,7 +25,7 @@
     color: black;
     padding: 1.5rem;
     min-height: 35rem;
-    min-width: 60%;
+    min-width: 80%;
 }
 
 .transactionDetailContainer {
@@ -59,10 +59,12 @@
 .txnDetailKeyContainer {
     padding-left: 1rem;
     width: 30%;
+    text-align: left;
 }
 
 .txnDetailKeyText {
     font-size: 1rem;
+   
 }
 
 .txnDetailValueContainer {
@@ -71,11 +73,19 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-align: left;
 }
 
 .txnDetailValueText {
     font-size: 1rem;
     font-weight: bold;
+    width: calc(70%);
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
 }
 
 @media screen and (max-width: 1000px) {

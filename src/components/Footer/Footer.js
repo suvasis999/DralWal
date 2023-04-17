@@ -7,7 +7,7 @@ const Footer = () => {
     return(
         <div className={classes.footerContainer}>
             <div className={classes.footerMainTextContainer}>
-                <div className={classes.footerMainDataContainer}>
+               {/* <div className={classes.footerMainDataContainer}>
                     <div className={classes.footerMainDataHeadingContainer}>
                         <span className={classes.footerMainDataHeadingText}>
                             Explore
@@ -19,7 +19,7 @@ const Footer = () => {
                              Transactions
                         </span>
                     </div>
-                </div>
+                </div>*/}
                
                 <div className={classes.footerMainDataContainer}>
                     <div className={classes.footerMainDataHeadingContainer}>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
                     <div className={classes.footerMainDataValuesContainer}>
                         <span className={classes.footerMainDataValuesText}>
-                            <a href="#"  className={classes.footerAText}>
+                            <a href="https://www.drala.io "  className={classes.footerAText} target='_blank'>
                                 Drala
                             </a>
                         </span>

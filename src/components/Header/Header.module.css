@@ -2,6 +2,7 @@
     height: max-content;
     /*background: linear-gradient(181deg, rgb(255 211 95 / 0%) 0%, #ffd436 0%, #ff7b00d1 50%, #dbd33169 100%);*/
     background-color: #ce5d00;
+    background: rgba(0,0,0,.8);
     color: white;
 }
 
@@ -27,7 +28,7 @@
 
 .headerImg {
     height: 80%;
-   
+    margin-top: 8px;
 }
 
 .headerText {

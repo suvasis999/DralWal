@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import classes from './Transaction.module.css';
 import { useNavigate, useParams } from "react-router-dom";
 import { ethers } from 'ethers';
-
+import moment from 'moment';
 const Transaction = () => {
 
     const { tId } = useParams();
@@ -28,6 +28,7 @@ const Transaction = () => {
         })
         .then((data) => {
             if(data.status && data.tran !== null && data.block !== null) {
+                console.log(data);
                 setblockData(data);
                 setLoading(false);
             }
@@ -61,13 +62,30 @@ const Transaction = () => {
                         <div className={classes.txnDataContainer}>
                             <div className={classes.txnDetailKeyContainer}>
                                 <span className={classes.txnDetailKeyText}>
-                                    Transaction Hash
+                                    Date Time
+                                    
                                 </span>
                             </div>
                             <div className={classes.txnDetailValueContainer}>
-                                <span className={classes.txnDetailValueText}>
-                                    {blockData.tran.transactionHash}
+                                
+                                <div className={classes.txnDetailValueText}>
+                                {/*moment(blockData.tran.timestamp* 1000).utc().format("YYYY-MM-DD HH:mm:ss")} UTC*/}
+                                </div>
+                            </div>
+                        </div>
+                        <div className={classes.border} />
+                        <div className={classes.txnDataContainer}>
+                            <div className={classes.txnDetailKeyContainer}>
+                                <span className={classes.txnDetailKeyText}>
+                                    Transaction Hash
+                                    
                                 </span>
+                            </div>
+                            <div className={classes.txnDetailValueContainer}>
+                                
+                                <div className={classes.txnDetailValueText}>
+                                    {blockData.tran.transactionHash}
+                                </div>
                             </div>
                         </div>
                         <div className={classes.border} />
@@ -127,7 +145,7 @@ const Transaction = () => {
                             </div>
                         </div>
                         <div className={classes.border} />
-                        <div className={classes.txnDataContainer}>
+                       {/*s<div className={classes.txnDataContainer}>
                             <div className={classes.txnDetailKeyContainer}>
                                 <span className={classes.txnDetailKeyText}>
                                     Drala Price
@@ -152,11 +170,11 @@ const Transaction = () => {
                                 </span>
                             </div>
                         </div>
-                        <div className={classes.border} />
+                        <div className={classes.border} />*/}
                         <div className={classes.txnDataContainer}>
                             <div className={classes.txnDetailKeyContainer}>
                                 <span className={classes.txnDetailKeyText}>
-                                    Value
+                                    Drala
                                 </span>
                             </div>
                             <div className={classes.txnDetailValueContainer}>
