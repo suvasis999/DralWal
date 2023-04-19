@@ -25,7 +25,7 @@ const Address = () => {
     const navigate = useNavigate();
 
     const fetchData = () => {
-        fetch('https://backv2.musascan.io/fetchaddress', options)
+        fetch('http://137.184.154.129:3002/fectchaddress', options)
         .then((response) => {
             return response.json();
         })

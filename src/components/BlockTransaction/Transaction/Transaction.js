@@ -33,7 +33,7 @@ const Transaction = () => {
     }
 
     const fetchData = () => {
-        fetch('https://backv2.musascan.io/fetchtranrange', options)
+        fetch('http://137.184.154.129:3002/fetchtranrange', options)
         .then((response) => {
             return response.json();
         })

@@ -17,19 +17,22 @@ const Transaction = () => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            tran: tId
+           // tran: tId
+           hash: tId
         })
     };
 
     const fetchData = () => {
-        fetch('https://back.musascan.io/txdetal', options)
+        fetch('http://137.184.154.129:3002/txdetail', options)
         .then((response) => {
+            
             return response.json();
         })
         .then((data) => {
-            if(data.status && data.tran !== null && data.block !== null) {
-                console.log(data);
-                setblockData(data);
+            console.log(data);
+            if(data.message.status && data.message.tran !== null && data.message.tranr !== null) {
+                console.log(data.message);
+                setblockData(data.message);
                 setLoading(false);
             }
         })
@@ -84,7 +87,7 @@ const Transaction = () => {
                             <div className={classes.txnDetailValueContainer}>
                                 
                                 <div className={classes.txnDetailValueText}>
-                                    {blockData.tran.transactionHash}
+                                    {blockData.tranr.transactionHash}
                                 </div>
                             </div>
                         </div>
@@ -98,7 +101,7 @@ const Transaction = () => {
                             <div className={classes.txnDetailValueContainer}>
                                 <span className={classes.txnDetailValueText}>
                                     {
-                                        blockData.tran.status ?
+                                        blockData.tranr.status ?
                                         'Success'
                                         : 'Pending'
                                     }
@@ -179,7 +182,7 @@ const Transaction = () => {
                             </div>
                             <div className={classes.txnDetailValueContainer}>
                                 <span className={classes.txnDetailValueText}>
-                                    {Number(blockData.block.value.hex)}
+                                    {Number(blockData.tran.value.hex)}
                                 </span>
                             </div>
                         </div>

@@ -61,7 +61,6 @@ const Block = () => {
                         </div>
                     </div>
                 </div>
-               
                 :
                 <div className={classes.blockMainParentWrapper}>
                     <div className={classes.blockDataMainContainer}>
@@ -162,7 +161,7 @@ const Block = () => {
                                 </div>
                             </div>                
                             <div className={classes.border} />
-                            <div className={classes.blockDataContainer}>
+                            <div className={classes.blockDataContain'er}>
                                 <div className={classes.blockDetailKeyContainer}>
                                     <span className={classes.blockDetailKeyText}>
                                         Drala Limit

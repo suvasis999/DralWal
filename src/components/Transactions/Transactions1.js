@@ -29,7 +29,7 @@ const Transactions = () => {
     }
 
     const handleNext = () => {
-        setCount(count => count + 1);
+        setCount(count => 1);
     }
 
     const fetchData = () => {
@@ -45,7 +45,7 @@ const Transactions = () => {
             })
         };
         setLoading(true);
-        fetch('https://backv2.musascan.io/fetchtranrange', options)
+        fetch('http://137.184.154.129:3002/fetchtranrange', options)
         .then((response) => {
             return response.json();
         })
@@ -112,13 +112,17 @@ const Transactions = () => {
                                             <div key={ind} className={classes.textDetailsContainer}>
                                                 <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
                                                 {moment(data.timestamp* 1000).utc().format("YYYY-MM-DD HH:mm:ss")} UTC
+                                                
                                             </span>
                                             <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
                                                 {data.hash}
                                             </span>
-                                            <span className={classes.minorDataText} onClick={() => navigate(`/blocks/${data.blockNumber}`)}>
+                                            {/*<span className={classes.minorDataText} onClick={() => navigate(`/blocks/${data.blockNumber}`)}>
                                                 {data.blockNumber}
-                                            </span>
+                                    </span>*/}
+                                   <span className={classes.minorDataText} onClick={() => console.log('')}>
+                                                {data.blockNumber}
+                                    </span>
                                             {/* <span className={classes.minorDataText}>
                                                 {data.age}
                                             </span> */}

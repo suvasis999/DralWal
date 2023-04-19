@@ -32,10 +32,16 @@
     width: calc(30%);
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
     cursor: pointer;
     color: black;
     padding-right: 8px;
+     font-size: 1rem;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        text-align: left;
+    
 }
 
 .txnDataNoText {
@@ -60,6 +66,7 @@
     color: #77838f;
     background-color: rgba(119,131,143,.1) !important;
     border-radius: 10px;
+    min-width: 120px;
 }
 
 .txnTxnDetailsContainer {
@@ -68,32 +75,48 @@
     min-width: 0;
     width: calc(30%);
     text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
     color: black;
     padding: 0 8px;
 }
 
 .txnTxnRecipientName {
     padding-bottom: 0.5rem;
+    white-space: nowrap;
+    white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        text-align: left;
 }
 
 .txnTxnRecipientNameText {
     color: black;
     font-size: 1rem;
     padding-right: 0.5rem;
+    
 }
 
 .txnTxnRecipientNameValue {
     color: black;
     font-size: 0.9rem;
     cursor: pointer;
+    white-space: nowrap;
+    white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        text-align: left;
 }
 
 .txnTxnRecipientNameValue:hover {
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.7);
     font-weight: bold;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
 }
 
 .txnTxnCountValue {
