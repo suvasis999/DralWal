@@ -18,18 +18,19 @@ const Address = () => {
         body: JSON.stringify({
             "address": addressId,
             "m": 1,
-            "n": 25
+            "n": 1000
         })
     };
 
     const navigate = useNavigate();
 
     const fetchData = () => {
-        fetch('http://137.184.154.129:3002/fectchaddress', options)
+        fetch('http://137.184.154.129:3002/fetchaddress', options)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
+            console.log(data);
             setAddressData(data.message)
             setLoading(false);
         })
@@ -37,6 +38,16 @@ const Address = () => {
             console.log(err);
         })
     }
+
+    const toPlainString=(num)=> {
+        return (''+ +num).replace(/(-?)(\d*)\.?(\d*)e([+-]\d+)/,
+          function(a,b,c,d,e) {
+            return e < 0
+              ? b + '0.' + Array(1-e-c.length).join(0) + c + d
+              : b + c + d + Array(e-d.length+1).join(0);
+          });
+      }
+      
 
     useEffect(() => {
         fetchData();
@@ -103,7 +114,7 @@ const Address = () => {
                                             <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
                                                 {data.hash}
                                             </span>
-                                            <span className={classes.minorDataText} onClick={() => navigate(`/blocks/${data.blockNumber}`)}>
+                                            <span className={classes.minorDataText} onClick={() =>console.log('') /*navigate(`/blocks/${data.blockNumber}`)*/}>
                                                 {data.blockNumber}
                                             </span>
                                             {/* <span className={classes.minorDataText}>
@@ -116,10 +127,11 @@ const Address = () => {
                                                 {data.to}
                                             </span>
                                             <span className={classes.minorDataText}>
-                                                {ethers.utils.formatEther(data.value)}
+                                                {ethers.utils.formatEther(toPlainString(data.value))}
+                                                {/*ethers.utils.formatEther(data.value)*/}
                                             </span>
                                             <span className={classes.minorDataText}>
-                                                {ethers.utils.formatEther(data.gasUsed)}
+                                                {data.gasUsed}
                                             </span>
                                         </div>
                                     )

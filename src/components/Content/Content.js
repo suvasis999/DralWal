@@ -13,7 +13,7 @@ const Content = () => {
 
     const [inputVal, setInputVal] = useState('');
     const [err,setErr]=useState('');
-    const inputPlaceHolder = "Search by Address/Txn Hash/Block";
+    const inputPlaceHolder = "Search by Address/Txn Hash";
 
     const navigate = useNavigate();
     
@@ -85,7 +85,7 @@ const Content = () => {
                         </p>
                     </div>
                     </div>
-                    <div className='submain-1'>
+                    {/*<div className='submain-1'>
                     <div>
                         <img src={logo3} className="icons" />
                     </div>
@@ -95,7 +95,7 @@ const Content = () => {
                             $1,179.70 <span className='spn'>   </span>
                         </p>
                     </div>
-                    </div>
+    </div>*/}
                      {/*<div className='submain-1'>
                     <div>
                         <img src={logo4} className="icons" />
@@ -111,11 +111,11 @@ const Content = () => {
                     </div>
                 </div>
                 </div>
-                <div className='right-stats'>
+                {/*<div className='right-stats'>
                 <div>
                     <img src={etherStatGraph} style={{height:"150px", width:"100%"}} />
                 </div>
-                </div>
+                </div>*/}
             </section>
         </div>
     )

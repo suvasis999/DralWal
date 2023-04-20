@@ -114,6 +114,13 @@
     white-space: nowrap;
     cursor: pointer;
     padding: 0 4px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 14px;
 }
 
 .minorDataText {

@@ -182,7 +182,7 @@ const Transaction = () => {
                             </div>
                             <div className={classes.txnDetailValueContainer}>
                                 <span className={classes.txnDetailValueText}>
-                                    {Number(blockData.tran.value.hex)}
+                                    {ethers.utils.formatEther(blockData.tran.value.hex)}
                                 </span>
                             </div>
                         </div>
