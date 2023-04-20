@@ -62,7 +62,7 @@ const Transaction = () => {
                     </div>
                     <div className={classes.txnDetailsContainer}>
                         <div className={classes.border} />
-                        <div className={classes.txnDataContainer}>
+                        {/*<div className={classes.txnDataContainer}>
                             <div className={classes.txnDetailKeyContainer}>
                                 <span className={classes.txnDetailKeyText}>
                                     Date Time
@@ -72,10 +72,12 @@ const Transaction = () => {
                             <div className={classes.txnDetailValueContainer}>
                                 
                                 <div className={classes.txnDetailValueText}>
-                                {/*moment(blockData.tran.timestamp* 1000).utc().format("YYYY-MM-DD HH:mm:ss")} UTC*/}
+                                {moment.unix(blockData.tran.timestamp/1000).format("YYYY-MM-DD HH:mm:ss")} 
+                                {moment.unix(blockData.tran.timestamp).format('dddd, MMMM Do, YYYY h:mm:ss A')
+}
                                 </div>
                             </div>
-                        </div>
+                        </div>*/}
                         <div className={classes.border} />
                         <div className={classes.txnDataContainer}>
                             <div className={classes.txnDetailKeyContainer}>

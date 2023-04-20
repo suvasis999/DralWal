@@ -81,9 +81,10 @@ const Transactions = () => {
                         </div>
                         <div className={classes.tableContainer}>
                             <div className={classes.tableHeadingContainer}>
-                            <span className={classes.majorDataText}>
+                           {/*<span className={classes.majorDataText}>
                                     Date Time
                                 </span>
+            */}
                                 <span className={classes.majorDataText}>
                                     Txn Hash
                                 </span>
@@ -110,10 +111,10 @@ const Transactions = () => {
                                 tranData.map((data, ind) => {
                                     return(
                                             <div key={ind} className={classes.textDetailsContainer}>
-                                                <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
-                                                {moment(data.timestamp* 1000).utc().format("YYYY-MM-DD HH:mm:ss")} UTC
+                                               {/* <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
+                                                {moment(data.timestamp* 1000).format("YYYY-MM-DD HH:mm:ss")} UTC
                                                 
-                                            </span>
+                                    </span>*/}
                                             <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
                                                 {data.hash}
                                             </span>

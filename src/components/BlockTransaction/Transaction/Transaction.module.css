@@ -43,7 +43,24 @@
         text-align: left;
     
 }
-
+.txnDataTimeContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: calc(10%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    color: black;
+    padding-right: 8px;
+     font-size: 1rem;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        text-align: left;
+    
+}
 .txnDataNoText {
     font-size: 1rem;
     color: black;

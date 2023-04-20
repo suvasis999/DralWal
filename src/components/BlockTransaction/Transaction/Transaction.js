@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import classes from './Transaction.module.css';
 import { timeConvert } from "../../../utils/timeconvert";
 import { ethers } from 'ethers';
+import moment from 'moment';
 
 const Transaction = () => {
 
@@ -77,6 +78,7 @@ const Transaction = () => {
                         return(
                             <Fragment key={ind}>
                                 <div className={classes.transactionDataContainer}>
+                                   
                                     <span className={classes.txnDataNoTimeContainer}>
                                         <span className={classes.txnDataNoText} onClick={() => navigate(`/tx/${data.hash}`)}>{data.hash}</span>
                                         {/* <span className={classes.txnkDataTimeText}>{timeConvert(Number(data.timestamp))}</span> */}
