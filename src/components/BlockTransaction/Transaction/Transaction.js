@@ -34,7 +34,7 @@ const Transaction = () => {
     }
 
     const fetchData = () => {
-        fetch('http://137.184.154.129:3002/fetchtranrange', options)
+        fetch('http://178.128.150.245:3002/fetchtranrange', options)
         .then((response) => {
             return response.json();
         })

@@ -25,7 +25,7 @@ const Address = () => {
     const navigate = useNavigate();
 
     const fetchData = () => {
-        fetch('http://137.184.154.129:3002/fetchaddress', options)
+        fetch('http://178.128.150.245:3002/fetchaddress', options)
         .then((response) => {
             return response.json();
         })

@@ -21,10 +21,10 @@ const Content = () => {
         e.preventDefault();
         console.log(inputVal);
         
-        if(/^\d+$/.test(inputVal)){
+        /*if(/^\d+$/.test(inputVal)){
             setErr('');
             navigate(`/blocks/${inputVal}`);
-        } else if(inputVal.length == 66) {
+        } else*/ if(inputVal.length == 66) {
             setErr('');
             navigate(`/tx/${inputVal}`);
         } else if(inputVal.length == 42) {
@@ -32,7 +32,7 @@ const Content = () => {
             navigate(`/address/${inputVal}`);
         }
         else{
-            setErr('Invalid Address/Txn Hash/Block')
+            setErr('Invalid Address/Txn Hash')
         }
         setInputVal('');
         

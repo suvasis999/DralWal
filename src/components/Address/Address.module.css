@@ -120,7 +120,7 @@
     white-space: -o-pre-wrap;
     word-wrap: break-word;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .minorDataText {
@@ -132,6 +132,7 @@
     white-space: nowrap;
     cursor: pointer;
     padding: 0 4px;
+    
 }
 
 

@@ -45,7 +45,7 @@ const Transactions = () => {
             })
         };
         setLoading(true);
-        fetch('http://137.184.154.129:3002/fetchtranrange', options)
+        fetch('http://178.128.150.245:3002/fetchtranrange', options)
         .then((response) => {
             return response.json();
         })
@@ -60,6 +60,9 @@ const Transactions = () => {
         })
     }
 
+   
+
+      
     useEffect(() => {
         fetchData();
     }, [count]);
@@ -81,7 +84,7 @@ const Transactions = () => {
                         </div>
                         <div className={classes.tableContainer}>
                             <div className={classes.tableHeadingContainer}>
-                           {/*<span className={classes.majorDataText}>
+                          {/* <span className={classes.majorDataText}>
                                     Date Time
                                 </span>
             */}
@@ -111,10 +114,10 @@ const Transactions = () => {
                                 tranData.map((data, ind) => {
                                     return(
                                             <div key={ind} className={classes.textDetailsContainer}>
-                                               {/* <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
-                                                {moment(data.timestamp* 1000).format("YYYY-MM-DD HH:mm:ss")} UTC
-                                                
-                                    </span>*/}
+                                              {/*  <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
+                                                {moment(1681922769809307539/1000).format("YYYY-MM-DD HH:mm:ss")} UTC
+                                               
+                                            </span>*/}
                                             <span className={classes.majorDataText} onClick={() => navigate(`/tx/${data.hash}`)}>
                                                 {data.hash}
                                             </span>

@@ -23,7 +23,7 @@ const Transaction = () => {
     };
 
     const fetchData = () => {
-        fetch('http://137.184.154.129:3002/txdetail', options)
+        fetch('http://178.128.150.245:3002/txdetail', options)
         .then((response) => {
             
             return response.json();
